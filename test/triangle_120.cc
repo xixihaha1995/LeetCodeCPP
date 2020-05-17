@@ -37,7 +37,19 @@ TEST(minimumTotal, minimumTotal_test)
     int ans = 11;
     EXPECT_EQ(s.minimumTotal(in), ans);
 }
-
+TEST(minimumTotal, minimumTotal_2)
+{
+    Solution s;
+    vector<vector<int>> in2 = {
+        {2},
+        {5,6},
+        {11,10,11},
+        {15,11,18,14}
+    };
+    int ans = 28;
+    EXPECT_EQ(s.minimumTotal(in2), ans);
+    
+}
 int main(int argc, char **argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
