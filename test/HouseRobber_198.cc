@@ -4,13 +4,13 @@ class Solution
 {
 public:
   int rob(<vector<int>& nums) {
-    if nums is empty{
+    if (nums.empty()){
       return 0;
     }
     int len = nums.size();
-    vector<int> dp = 
+    vector<int> dp (len,0);
     for(int i = 0; i < len; ++i){
-      dp[i] = max((i>0) ? dp[i-1] : nums[i], (i>1) ? dp[i-2] : nums[i]);
+      dp[i] = max((i>0) ? dp[i-1] : nums[i], (i>1) ? dp[i-2]+nums[i] : nums[i]);
     }
     return dp.back();
   }
