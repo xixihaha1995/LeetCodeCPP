@@ -3,7 +3,7 @@
 class Solution
 {
 public:
-  int rob(<vector<int>& nums) {
+  int rob(vector<int>& nums) {
     if (nums.empty()){
       return 0;
     }
@@ -19,9 +19,9 @@ public:
 TEST(rob, rob_test)
 {
     Solution s;
-    vector<int> A = { 1，2};
+    vector<int> A = {1,2};
     int ans = 2;
-    EXPECT_EQ(s.minFallingPathSum(A), ans);
+    EXPECT_EQ(s.rob(A), ans);
 }
 
 int main(int argc, char **argv)
